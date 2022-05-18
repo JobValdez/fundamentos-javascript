@@ -10,7 +10,15 @@
 
             async function traerPais()
             {
-                const repuesta = await fetch("https://api.nationalize.io?name=michael");
+                const repuesta = await fetch("https://api.nationalize.io?/pollos/name=michael");
+
+                if(!repuesta.OK)
+                {
+                    let oops = "404 no encontre nada";
+                    alert(oops);    
+                    throw new Error(oops);
+                }
+
                 const nombre = repuesta.json();
                 return nombre;
             }
