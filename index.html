@@ -7,9 +7,19 @@
         <title>Mi primer proyecto serio</title>
 
         <script type="text/javascript">
-            function mostrarNombre(n) {
-                document.getElementById("mensaje").innerHTML = n;
+
+            async function traerPais()
+            {
+                const repuesta = await fetch("https://api.nationalize.io?name=michael");
+                const nombre = repuesta.json();
+                return nombre;
             }
+
+            function mostrarNombre(n) {
+                document.getElementById("mensaje").innerHTML = n.country[0].country_id;
+            }
+
+            traerPais().then(mostrarNombre);
         </script>
 
     </head>
