@@ -1,0 +1,17 @@
+.suma {
+    display: flex;
+    flex-direction: column;
+}
+
+.suma label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.suma input {
+    margin-left: 5px;
+}
+
+.sumar {
+    margin-left: 100px;
+}
