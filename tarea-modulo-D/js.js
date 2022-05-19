@@ -67,3 +67,28 @@ button4.addEventListener('click', function(){
     let randomColor = colors[Math.floor(Math.random() * colors.length)];
     box4.style.background = randomColor;
 })
+
+    // TAREA 3 CONVERTIR MINUTOS EN SEGUNDOS
+
+    let segundos = 60;
+    //Getting the button
+    let convert = document.getElementById('convert');
+    
+    //Adding the event when clicking the button
+    convert.addEventListener('click', function (){
+
+            //Getting the minutes value
+            let minutes = parseFloat(document.getElementById('minutes').value);
+
+            //Converting the minutes in seconds
+            let result = minutes * segundos + " segundos";
+
+            //Getting and returning the value.
+            document.getElementById("result").value = result;
+
+            return result;
+            
+            
+}
+
+    )
